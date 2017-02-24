@@ -1,0 +1,5 @@
+1.文件夹54274为图像数据集。根据数据集按命令“python index.py --dataset 54274 --shelve db.shelve_54274”创建shelve数据库，存储了图像哈希值与其对应的文件名。
+2.选取一个图像文件计算其图像哈希值，与数据库中哈希值进行比对，差值的绝对值小于等于distance便将其判定为相似，复制到similar文件夹中。反之复制到unsimilar文件夹中。命令“python group.py --dataset 54274 --shelve db.shelve_54274 --query 0_0.978662_s0-131d0920-e1e1-11e6-885d-ff6e67f653c9.jpg --distance 0”
+
+测试结果：
+从图像数据集随机选了张图作为测试图，设置distance=0时，它只选出与测试图相同的图。
